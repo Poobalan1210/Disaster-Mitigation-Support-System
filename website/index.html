@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Mitigation Support System</title>
+    <link rel="stylesheet" href="/website/index.css">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+</head>
+<body>
+    
+    <div class="mt-4">
+        <div class="intro text-center ">
+            <p>Disaster Mitigation Support System</p>
+        </div>
+
+        <section class="intropage mb-5">
+            <div id="map" class="m-5"></div>
+            <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAysywWbD4O4UPpCQrci50kaLHVQbrJm7Y&callback=initMap">
+            </script>
+            <script src="/website/newloc.js"></script>
+        </section>
+
+        <section class="voluntertable m-5">
+            <p class="text-center intro">Find the volunter nearby you</p>
+            <table class="table table-hover table-bordered table-striped">
+                <thead>
+                    <th>S.NO</th>
+                    <th>Voluntername</th>
+                    <th>Phone</th>
+                    <th>Street</th>
+                    <th>City</th>
+                    <th>District</th>
+                    <th>State</th>
+                    <th>Pincode</th>
+                    <th>Email</th>
+                    <th>Help-offered</th>
+                    <th>Quantity</th>
+                </thead>
+                <tbody id="tbody1">
+        
+                </tbody>
+            </table>
+            <script src="/website/retrive.js"></script>
+        </section>
+        
+        
+        
+        <section class="volunterform m-5">
+            <p class="intro text-center">Want to help the people ? Get Started below </p>
+            <form>
+                <table>
+                    <tr>
+                        <td><table class="formtable">
+                            <tr>
+                                <td><label> Name</label></td>
+                                <td><input size = "30" class="inputbox" required type="text" name="name" id="namebox" placeholder="Enter your Name" ></td>
+                            </tr>
+                            <tr>
+                                <td><label >Phone Number</label></td>
+                                <td><input size = "30" class="inputbox" type="text" name="phone" id="phone" placeholder="Enter your Phone No" required></td>
+                            </tr>
+                            <tr>
+                                <td><label >Street Name</label></td>
+                                <td><input size = "30" class="inputbox" type="text" name="street" id="streetbox" placeholder="Enter your street name" required></td>
+                            </tr>
+                            <tr>
+                                <td><label >City Name</label></td>
+                                <td><input size = "30" class="inputbox" type="text" name="city" id="citybox" placeholder="Enter your city name" required></td>
+                            </tr>
+                            <tr>
+                                <td><label >District Name</label></td>
+                                <td><input size = "30" class="inputbox" type="text" name="district" id="districtbox" placeholder="Enter your district name" required></td>
+                            </tr>
+                            <tr>
+                                <td><label >State Name</label></td>
+                                <td><input size = "30" class="inputbox" type="text" name="state" id="statebox" placeholder="Enter your state name" required></td>
+                            </tr>
+                            <tr>
+                                <td><label >Pincode</label></td>
+                                <td><input size = "30"class="inputbox" type="text" name="pincode" id="pincodebox" placeholder="Enter your pincode" required></td>
+                            </tr>
+                            <tr>
+                                <td><label >Email</label></td>
+                                <td><input size = "30" class="inputbox" type="text" name="email" id="emailbox" placeholder="Enter your email address" required></td>
+                            </tr>
+                            <tr>
+                                <td><label >What can you help with</label></td>
+                                <td><input size = "30" class="inputbox" type="text" name="help" id="helpwithbox" placeholder="Mention the help you can offer" required></td>
+                            </tr>
+                            <tr>
+                                <td><label >Quantity </label></td>
+                                <td><input size = "30" class="inputbox" type="text" name="quanity" id="quantitybox" placeholder="How Much you can offer" required></td>
+                            </tr>
+                            <tr>
+                                <td><input size = "30" class="inputbutton " type="button" value="submit" id="insert"></td>
+                            </tr>
+                        </table></td>
+                        <td><img class= "volunterimage" src="/website/20201014 Logo English_0.jpg" alt=""></td>
+                    </tr>
+                </table>
+                
+                <script src="/website/database.js"></script>
+            </form>
+        </section>
+
+    </div>
+</body>
+</html>
