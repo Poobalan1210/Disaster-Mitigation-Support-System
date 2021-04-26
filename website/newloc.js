@@ -16,7 +16,7 @@ var firebaseConfig = {
   
   var center = {lat: 10.9094334, lng: 78.3665347};
   var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 9,
+      zoom: 4,
       center: center
     });
   var infowindow =  new google.maps.InfoWindow({});
