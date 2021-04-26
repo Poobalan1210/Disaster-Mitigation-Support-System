@@ -45,6 +45,8 @@ document.addEventListener('DOMContentLoaded',function (){
             Quantity : Quantity
     
         });
+
+        window.location.reload(1);
     })
 });
 
